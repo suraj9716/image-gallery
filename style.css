@@ -1,0 +1,89 @@
+* {
+  background-color: grey;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1{
+  color: white;
+    margin: 20px 0;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 3rem;
+}
+
+.card{
+    width: 32%;
+    /* flex-basis: calc(33.33% - 10px); */
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    
+    /* box-shadow: 10px 10px 10px 10px; */
+    /* filter: drop-shadow(0.35rem 0.35rem 0.35rem  rgba(0.5, 0.5, 0.5, 0.5)); */
+    filter: drop-shadow(0 0 10px white);
+    /* filter: grayscale(0%); */
+    transition: 0.4s;
+  }
+
+  .card:hover img{
+filter: grayscale(0%);
+  }
+
+img{
+    height: 100%;
+    width: 100%;
+    filter: grayscale(100%);
+    object-fit: cover;
+    box-shadow:   0 0 200px #333;
+}
+
+figcaption{
+  background-color: transparent;
+  color: white;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+}
+
+.galary{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+    /* CSS rules for screens with a maximum width of 768px */
+    .container {
+      max-width: 90%;
+    }
+    .card {
+      width: 48%;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    /* Styles for mobile devices */
+    .card {
+      width: 100%;
+    }
+  }
